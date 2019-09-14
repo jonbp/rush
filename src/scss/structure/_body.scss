@@ -1,0 +1,346 @@
+.latest-result {
+  padding: 60px 0;
+  background-color: darken($bg-color, 2%);
+
+  .container.results {
+    display: flex;
+
+    .result {
+      margin-right: 60px;
+
+      .figure-wrap {
+        display: flex;
+        align-items: flex-end;
+
+        .icon {
+          position: relative;
+          width: 50px;
+          height: 50px;
+          margin-right: 15px;
+
+          svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+          }
+
+          @include respond($responsive-phablet) {
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+          }
+        }
+
+        .figure {
+          display: flex;
+          align-items: flex-end;
+
+          .large {
+            font-size: 5rem;
+            line-height: 3.5rem;
+
+            @include respond($responsive-phablet) {
+              font-size: 3rem;
+              line-height: 2.15rem;
+            }
+          }
+
+          .small {
+            font-size: 2.5rem;
+            line-height: 1.75rem;
+          }
+
+          .label {
+            margin-left: 5px;
+            font-size: .875rem;
+            line-height: .75rem;
+          }
+        }
+
+        @include respond($responsive-tablet) {
+          justify-content: center;
+        }
+      }
+
+      .result-label {
+        text-transform: uppercase;
+        font-weight: 500;
+        padding-left: 65px;
+        padding-top: 15px;
+
+        @include respond($responsive-tablet) {
+          padding-left: 0;
+          text-align: center;
+        }
+      }
+
+      &.dl {
+        .icon {
+          circle {
+            fill: $color-a;
+          }
+
+          path {
+            stroke: $color-a;
+          }
+        }
+
+        .figure,
+        .result-label {
+          color: $color-a;
+        }
+
+        @include respond($responsive-phablet) {
+          background-color: rgba($color-a, .1);
+        }
+      }
+
+      &.ul {
+        .icon {
+          transform: rotate(180deg);
+
+          circle {
+            fill: $color-b;
+          }
+
+          path {
+            stroke: $color-b;
+          }
+        }
+
+        .figure,
+        .result-label {
+          color: $color-b;
+        }
+
+        @include respond($responsive-phablet) {
+          background-color: rgba($color-b, .1);
+        }
+      }
+
+      &.ping {
+        padding-top: 24px;
+
+        .icon {
+          width: 26px;
+          height: 26px;
+
+          circle {
+            fill: $color-c;
+          }
+
+          path {
+            stroke: $color-c;
+          }
+        }
+
+        .figure {
+          color: $color-c;
+
+          .large {
+            font-size: 3rem;
+            line-height: 2.15rem;
+          }
+
+          .small {
+            font-size: 1.5rem;
+            line-height: 1.25rem;
+          }
+        }
+
+        .result-label {
+          padding-left: 44px;
+          color: $color-c;
+
+          @include respond($responsive-tablet) {
+            padding-left: 0;
+          }
+        }
+
+        @include respond($responsive-tablet) {
+          width: 30%;
+        }
+
+        @include respond($responsive-phablet) {
+          width: 100%;
+          background-color: rgba($color-c, .1);
+          margin-top: 20px;
+        }
+      }
+
+      @include respond($responsive-tablet) {
+        margin: 0;
+        width: 35%;
+      }
+
+      @include respond($responsive-phablet) {
+        width: calc(50% - 10px);
+        padding: 20px 0;
+        border-radius: 10px;
+      }
+
+      @include respond($responsive-mobile) {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+
+    .result-info {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      transform: translateY(-10px);
+
+      div {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 4px 0;
+
+        &.label {
+          text-align: right;
+
+          @include respond($responsive-tablet) {
+            width: 40%;
+          }
+
+          @include respond($responsive-phablet) {
+            width: 30%;
+            text-align: left;
+          }
+        }
+
+        &.value {
+          padding-left: 20px;
+          opacity: .5;
+
+          @include respond($responsive-tablet) {
+            width: 60%;
+          }
+
+          @include respond($responsive-phablet) {
+            width: 70%;
+          }
+        }
+      }
+
+      @include respond($responsive-tablet) {
+        width: 100%;
+        padding-top: 40px;
+      }
+    }
+
+    @include respond($responsive-tablet) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+
+.previous-results {
+  padding: 60px 0;
+
+  .results {
+    margin: 0 -20px;
+    overflow-x: scroll;
+
+    .result-row {
+      width: $container-width;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid rgba($fg-color, .05);
+      box-sizing: border-box;
+
+      span {
+        padding: 0 10px;
+        display: block;
+        box-sizing: border-box;
+        font-size: .875rem;
+        line-height: 1.25rem;
+        color: rgba($fg-color, .4);
+
+        &:nth-child(1) {
+          width: 15%;
+          color: rgba($fg-color, .5);
+        }
+
+        &:nth-child(2) {
+          width: 12%;
+          color: $color-a !important;
+
+          .icon svg path {
+            stroke: $color-a;
+          }
+        }
+
+        &:nth-child(3) {
+          width: 10%;
+          color: $color-b !important;
+
+          .icon {
+            transform: rotate(180deg);
+          }
+
+          .icon svg path {
+            stroke: $color-b;
+          }
+        }
+
+        &:nth-child(4) {
+          width: 10%;
+          color: $color-c !important;
+        }
+
+        &:nth-child(5) {
+          width: 15%;
+        }
+
+        &:nth-child(6) {
+          width: 13%;
+        }
+
+        &:nth-child(7) {
+          width: 10%;
+        }
+
+        &:nth-child(8) {
+          width: 15%;
+        }
+      }
+
+      &.labels {
+        position: sticky;
+        top: 0;
+        padding: 15px 10px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba($fg-color, .1);
+        margin-bottom: 5px;
+        background-color: $bg-color;
+
+        span {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          text-transform: uppercase;
+          color: $fg-color;
+          align-items: center;
+
+          .icon {
+            position: relative;
+            width: 12px;
+            height: 12px;
+            margin-right: 6px;
+
+            svg {
+              position: absolute;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// Font Family
+$font-family: 'Rubik', sans-serif;
+
+// Background & Foreground Colors
+$bg-color: #263238;
+$fg-color: #FFF;
+
+/* Result Colors
+ *
+ * A: Download Colour
+ * B: Upload Color
+ * C: Ping Color
+ *
+ */
+$color-a: #FFEB3B;
+$color-b: #8BC34A;
+$color-c: #00BCD4;
+
+// Container Width
+$container-width: 1260px;
+
+// Responsive Breakpoints
+$responsive-tablet: 1024px;
+$responsive-phablet: 800px;
+$responsive-mobile: 600px;

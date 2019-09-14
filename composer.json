@@ -1,0 +1,12 @@
+{
+    "name": "jonbp/rush",
+    "authors": [
+        {
+            "name": "Jon Beaumont-Pike",
+            "email": "jon@orphans.co.uk"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^3.5"
+    }
+}

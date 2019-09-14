@@ -1,0 +1,11 @@
+ @mixin respond($width, $condition: "max") {
+   $size-rule: max-width;
+
+   @if $condition=="min" {
+     $size-rule: min-width;
+   }
+
+   @media ($size-rule: $width) {
+     @content;
+   }
+ }

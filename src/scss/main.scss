@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,400i');
+
+@import "./node_modules/normalize.css/normalize";
+
+@import 'core/vars';
+@import 'core/mixins';
+@import 'core/keyframes';
+
+@import 'structure/shell';
+@import 'structure/header';
+@import 'structure/body';
+@import 'structure/footer';
