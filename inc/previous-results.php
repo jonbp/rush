@@ -5,16 +5,8 @@
     <div class="results">
       <div class="result-row labels">
         <span>Time / Date</span>
-        <span>
-        <div class="icon">
-          <?php echo file_get_contents('./src/svg/arrow-small.svg'); ?>
-        </div>
-        Download</span>
-        <span>
-        <div class="icon">
-          <?php echo file_get_contents('./src/svg/arrow-small.svg'); ?>
-        </div>
-        Upload</span>
+        <span>Download</span>
+        <span>Upload</span>
         <span>Ping</span>
         <span>Sponsor</span>
         <span>Location</span>

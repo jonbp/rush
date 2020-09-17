@@ -13,10 +13,8 @@
 <header>
   <div class="container">
     <div class="logo">
-      <div class="glyph">
-        <span class="line1"></span>
-        <span class="line2"></span>
-        <span class="line3"></span>
+      <div class="icon">
+        <img src="https://jonbp.github.io/project-icons/rush.svg" alt="Rush" />
       </div>
       <div class="text">Rush</div>
     </div>

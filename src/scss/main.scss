@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,400i');
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
 
+// NPM
 @import "./node_modules/normalize.css/normalize";
 
+// Core
 @import 'core/vars';
 @import 'core/mixins';
 @import 'core/keyframes';
 
+// Structure
 @import 'structure/shell';
 @import 'structure/header';
 @import 'structure/body';
